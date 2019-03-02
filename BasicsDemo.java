@@ -2,7 +2,6 @@ package sample;
 
 public class BasicsDemo {
 
-
     static void print() {
         System.out.println("\n\nInside print ...");
         System.out.println("Hello, world!!"); // Advance cursor to beginning of next line
@@ -66,10 +65,19 @@ public class BasicsDemo {
         System.out.println("cChar: " + cChar);
     }
 
+    static void arrays() {
+        System.out.println("\nInside arrays ...");
+        int[] myArray = new int[]{9, 11, 2, 5, 4, 4, 6};
+        System.out.println("myArray.length: " + myArray.length);
+        System.out.println("myArray[1]: " + myArray[1]);
+        System.out.println("myArray[7]: " + myArray[7]);
+    }
+
     public static void main(String[] args) {
         // Language Basics 1
         //print();
         //primitives();
-        typeCasting();
+        //typeCasting();
+        arrays();
     }
 }
