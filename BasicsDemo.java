@@ -139,7 +139,37 @@
 		//double d1 = 3.14;
 		//double d2 = 5.15;
 		//System.out.println("d1 | d2: " + (d1 | d2));
-  }
+    }
+  
+    static void switchExample() {
+	    System.out.println("\nInside switchExample ...");
+	    int month = 3;
+	    switch (month) {
+		    case 1: System.out.println("January");
+	                break;
+		    case 2: System.out.println("February");
+	                break;
+	        case 3: System.out.println("March");
+	                break;
+		    default: System.out.println("April");
+	    }
+    }
+  
+    static void labeledBreak() {
+	    System.out.println("\nInside labeledBreak ...");
+	    int num = 0;
+		
+	    outermost: for (int i = 0; i < 10; i++) {
+	        for (int j = 0; j < 10; j++) {    
+	            if (i == 5 && j == 5) {
+	                break outermost;
+	            }
+	            num++;
+	        }
+	    }
+		
+	    System.out.println("num: " + num); // prints 55		
+    }
 		
 	public static void main(String[] args) {	
 	  // Language Basics 1
@@ -152,6 +182,8 @@
       varargsOverload(true, 1, 2, 3, 4, 5, 6, 7, 8);	  
       varargsOverload(true);*/
 	  //charTypePromotion();
-	  bitwiseOperators();
+	  //bitwiseOperators();
+	  //switchExample();
+	  labeledBreak();
     }       
   }
